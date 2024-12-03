@@ -1,0 +1,3 @@
+# Test:
+
+Use this file to test if your GitHub setup is working as expected.
