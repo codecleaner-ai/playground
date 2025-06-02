@@ -1,0 +1,70 @@
+# Binaries for programs and plugins
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Test binary, built with `go test -c`
+*.test
+
+# Output of the go coverage tool, specifically when used with LiteIDE
+*.out
+
+# Dependency directories (remove the comment below to include it)
+vendor/
+
+# Go workspace file
+go.work
+
+# Binaries
+bin/
+
+# Packages
+pkg/
+
+# Godep vendor'd files
+Godeps/_workspace/
+
+# Temporary (intermediate) files
+*.tmp
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# IDE settings files
+.idea/
+.vscode/
+*.iml
+*.ipr
+*.iws
+.project
+.classpath
+
+# Generated files
+**/generated.go
+**/generated_*
+
+# Output of the go tool, such as `go build`, `go install`, `go clean`
+*.a
+*.o
+
+# Output from test coverage in Golang
+coverage.out
+
+#Secrets
+*.key
+*.pem
+*.p12
+*.cert
+*.config
+
+# All the content of the `development-secrets` directory
+development-secrets/*
+
+# The built Go binary
+app
+
+# The Super secret file that contains the API key for the service account
+saKeyFile.json
