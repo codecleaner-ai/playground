@@ -13,5 +13,3 @@ If you are planning Code Cleaner to work on your Open Source project, please let
 ## Examples:
 
 - [Express  (node.js)](https://github.com/expressjs/express): Fast, unopinionated, minimalist web framework for Node.js.
-
-
