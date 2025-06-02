@@ -1,18 +1,10 @@
-# Demos:
+# Codebase:
 
-To expain what the code Cleaner can do, we can do demos.
+We use the `codebase` folder to store sample code that we can use to test CodeCleaner AI.
 
-This section store useful information about the demos that we can do.
+## Sample Code:
 
-## Code Snippets:
-
-Code snippets that we can use to demonstrate the Code Cleaner functionalities.
-
-See the [Code Snippets](./code-snippets/README.md) section.
-
-## Code Snippets:
-
-We have several code snippets in different folder that you can use to test the Code Cleaner functionalities.
+We have several sample code that we can use to test CodeCleaner AI.
 
 | Folder | Description |
 | --- | --- |
@@ -21,14 +13,24 @@ We have several code snippets in different folder that you can use to test the C
 
 The code snippets are available in different languages.
 
-## How To Use The Code Snippets:
+To select a specific language, you can switch your branch to the language you want to test.
 
-- Navigate to the folder for the code you want to test. 
-
-Example: 
+To list all the branches, you can use the following command:
 
 ```bash
-cd dice-game/go
+git branch -a
 ```
 
-Use [app.CodeCleaner.ai](https://app.codecleaner.ai) with the test the code snippets.
+To switch to a specific branch, you can use the following command:
+
+```bash
+git checkout <branch-name>
+```
+
+Example:
+
+To switch to the codebase written in Go (Golang) you can use the following command:
+
+```bash
+git checkout go
+```
