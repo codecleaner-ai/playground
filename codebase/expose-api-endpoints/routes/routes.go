@@ -14,8 +14,7 @@ import (
 
 // `requireReadApiKey` is a middleware that protects endpoints with an API key.
 // It reads the expected API key from the environment variables
-//   - "AUTHORIZED_R_API_KEY": the API key for read-only access
-//   - "AUTHORIZED_RW_API_KEY": the API key for read-write access
+//   - "AUTHORIZED_API_KEY"
 //
 // and compares it with the incoming request's API key.
 // The incoming request must have the header "X-API-Key" set to the expected value.
@@ -24,11 +23,10 @@ func requireReadApiKey(next http.Handler) http.Handler {
 		// Read the API key from the request header and trim any whitespace.
 		apiKey := strings.TrimSpace(r.Header.Get("X-API-Key"))
 		// Fetch the expected API key from the environment and trim any whitespace.
-		expectedReadKey := strings.TrimSpace(os.Getenv("AUTHORIZED_R_API_KEY"))
-		expectedReadWriteKey := strings.TrimSpace(os.Getenv("AUTHORIZED_RW_API_KEY"))
+		expectedReadKey := strings.TrimSpace(os.Getenv("AUTHORIZED_API_KEY"))
 
 		// Check if the expected API keys are not set in the environment.
-		if expectedReadKey == "" || expectedReadWriteKey == "" {
+		if expectedReadKey == "" {
 			// Prepare the error message
 			errMsg := "The API keys to grant access are not set in the environment"
 
@@ -38,7 +36,7 @@ func requireReadApiKey(next http.Handler) http.Handler {
 			return
 		}
 		// Compare the provided API key with the expected API key.
-		if apiKey != expectedReadKey && apiKey != expectedReadWriteKey {
+		if apiKey != expectedReadKey {
 			// prepare the error message
 			errMsg := "Unauthorized access: the provided API Key is incorrect"
 			// Log the error message
@@ -115,13 +113,4 @@ func SetupRoutes(
 			),
 		),
 	).Methods("GET")
-
-	// `/connection-check` endpoint (protected with API key)
-	// Require API key to access this endpoint
-	// Log the setup of the route
-	utils.LogDebug(
-		logging.Info,
-		"Setting up GET route: /connection-check",
-		developmentMode,
-	)
 }

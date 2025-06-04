@@ -68,3 +68,6 @@ app
 
 # The Super secret file that contains the API key for the service account
 saKeyFile.json
+
+# Environment variable files
+.env
