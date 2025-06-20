@@ -4,7 +4,7 @@ A simple dice game where players roll a die and try to reach a target score.
 
 The code is available in different languages:
 
-- Golang/go on the `go` branch.
+- Golang/go on the `main` and on the `go` branch.
 - Python on the `python` branch.
 - Bash on the `bash` branch.
 - PHP on the `php` branch.
