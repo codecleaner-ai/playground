@@ -1,7 +1,4 @@
-# Utilities
+# Python Utilities
 
-Utilities to facilitate development and bash scripts we can use to speed up certain operations.
+Scripts and utilities that we can use for different things.
 
-## Development
-
-- [Create a DEV/Deployment machine](./dev-machine/README.md).
