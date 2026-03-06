@@ -1,0 +1,26 @@
+========== 2026-03-06T07:22:11+0000 ==========
+Command: ./utilities/add-folder-to-all-branches/add-folder-to-all-branches.sh utilities/
+========================================
+
+
+=== Step 0: Input ===
+Folder to add to all branches: utilities/
+
+=== Step 1: Check Git repository ===
+Repository root: /home/franck2605/Documents/data/github/public-repos/playground
+Result: OK
+
+=== Step 2: Check folder exists ===
+Result: OK
+
+=== Step 3: Current branch and folder status ===
+Current branch: python
+Folder is already tracked on python.
+
+Source branch for folder content: python
+
+=== Step 4: List branches ===
+Branches (5): bash go main php python
+
+=== Step 5: Add folder to each branch ===
+--- Branch: bash ---
